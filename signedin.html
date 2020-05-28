@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="images/icon.png" type="image/png">
+	<title>E-ShopNow- India's best footwear shopping website</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a0b568cb21.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+
+
+
+
+ <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>  
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA7r5EKmrIxtw_-Vxxuelcsf_i3Sgs-wmA",
+    authDomain: "e-shop-a7287.firebaseapp.com",
+    databaseURL: "https://e-shop-a7287.firebaseio.com",
+    projectId: "e-shop-a7287",
+    storageBucket: "e-shop-a7287.appspot.com",
+    messagingSenderId: "1042375309479",
+    appId: "1:1042375309479:web:e6248897b5b6544aee8382",
+    measurementId: "G-Q5RKB2XVE6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  
+</script>
+
+
+
+<body id="body">
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+
+<script src="js/scriptsign.js"></script>
+
+<header>
+<nav class="navbar navbar-expand-sm navbar-dark navbar-static-top" style="background-color:#222222;z-index: 1;" id="menu" >
+<h1><br></h1>
+<a href="signedin.html" class="">
+          <div id="logo-img">
+            <img src="images/logoed.png" class="imag" alt="Responsive image">
+
+          </div>
+
+
+        </a>
+
+        <a href="cart.html" id="ph">
+        <i class="fas fa-shopping-cart"></i>
+       </a>
+        
+
+        <div class="nav-brand">
+          <a href="signedin.html" id="h8">India's best footwear shopping website</a>
+
+          </div>
+
+
+   <div class="vl"></div>
+
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="background-color:#222222;">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active dropdown">
+       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: #FFFDD0;"> <span class="fas fa-user-circle" style="font-size: 40px; color:#8b6508; "></span><br>My Account</a>
+       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="index.html" style="color:#FFFDD0;">Sign-Out</a>
+          <a class="dropdown-item" href="myacc.html" style="color:#FFFDD0;">Update Info</a>
+          <a class="dropdown-item" href="myorder.html" style="color:#FFFDD0;">My Orders</a>
+          
+        </div>
+      </li>
+      <li>
+        <a class="nav-link" href="signedin.html" style="color: #FFFDD0;"> <span class="fas fa-home" style="font-size: 40px; color:#8b6508; "></span><br>Home</a>
+      </li>
+            <li class="nav-item active">
+        <a class="nav-link" href="pnew.html" style="color: #FFFDD0;"><span class="fas fa-gift" style="font-size: 40px; color:#8b6508;"></span><br>New Arrivals</a>
+      </li>
+      
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFDD0;"><span class="fas fa-shopping-bag" style="font-size: 40px; color:#8b6508;"></span><br>
+          Shop
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+          <a class="dropdown-item" href="plist.html" style="color:#FFFDD0;">All Products</a>
+          <a class="dropdown-item" href="pwomen.html" style="color:#FFFDD0;">Women's</a>
+          <a class="dropdown-item" href="pmen.html" style="color:#FFFDD0;">Men's</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="psale.html" style="color:#FFFDD0;">Clearance Sale</a>
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+     <input class="form-control mr-xs-2 mr-lg-2 mr-md-2 mr-sm-2" placeholder="Search for products" aria-label="Search" id="searchbox" style="background: #F3E5AB; color: #8b6508; ">
+
+      <button class="btn btn-outline-warning my-2 my-sm-0" id="searchbtn">Search</button>
+       </form>
+  </div>
+
+</nav>
+
+</header> 
+
+<h4 class="text-center pt-2 pb-2" id="hello" style="background-color: #222222; border-top: 1px solid #8b6508;"></h4>
+
+<div class="jumbotron mt-4" id="jumbo" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url('images/jumbojumbo.jpg'); background-repeat: no-repeat; background-size: cover; border-radius: 10px;" >
+  <h1 class="display-4">SALE UPTO 40%</h1>
+  <p class="lead">Buy your favourite footwear at the lowest prices !</p>
+  <hr class="my-4">
+  <p>Grab your footwear now!</p>
+  <p class="lead">
+    <a class="btn btn-warning btn-lg" href="psale.html" role="button" style="border-radius: 16px;">Shop</a>
+  </p>
+</div>
+
+<span class="tags"><h3 style="color: #8b6508; text-shadow: 1px 1px #8b6508;">Shop by Category </h3>
+<hr class="my-2" id="tagul"></span>
+<br>
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-12">
+	<div class="jumbotron" id="tile" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('images/shoesjumbo.jpg'); background-repeat: no-repeat; background-size: cover;border-radius: 10px;"  >
+	<p class="text-center"><h1>Shoes</h1><a class="btn btn-warning btn-lg mt-5" href="pshoes.html" role="button" style="border-radius: 16px;">Shop</a>
+	</p>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-4 col-sm-12" >
+<div class="jumbotron" id="tile" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('images/flipflopsjumbo.jpg'); background-repeat: no-repeat; background-size: cover;border-radius: 10px;"  >
+	<p class="text-center"><h1>Flip Flops</h1><a class="btn btn-warning btn-lg mt-5" href="pffs.html" role="button" style="border-radius: 16px;">Shop</a>	
+	</p>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-4 col-sm-12">
+<div class="jumbotron" id="tile" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('images/sandalsjumbo.jpg'); background-repeat: no-repeat; background-size: cover; border-radius: 10px;" >
+<p class="text-center"><h1>Sandals</h1><a class="btn btn-warning btn-lg mt-5" href="psandals.html" role="button" style="border-radius: 16px;">Shop</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4" style=" background-color: #222222">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-0">
+
+        <!-- Content -->
+        <p id="hmm"><a style="text-decoration:none; color: #FFFDD0;" href="aboutus.html" > About Us</a></br>
+        <a style="text-decoration:none; color: #FFFDD0;" href="contact.html">Contact Us</a><br>
+        <a style="text-decoration:none; color: #FFFDD0;" href="index.html">Sign Out</a></p>
+    
+        <hr class="foothr" >
+        <h3 class="font-weight-bold" id="hmm">Follow Us! </h3>
+        <p id="hmm">
+        	<a href="https://www.facebook.com/aniket.das13" target="_blank" style="text-decoration:none; color: #777663"><span class="fab fa-facebook-square" style="font-size: 20px; color:#8b6508;"></span>     Facebook</a><br>
+        	<a href="https://www.instagram.com/aniket.das13/" target="_blank"  style="text-decoration:none; color: #777663"><span class="fab fa-instagram" style="font-size: 20px; color:#8b6508;"></span>     Instagram</a><br>
+        	<a href="https://www.twitter.com/aniket_das13" target="_blank" style="text-decoration:none; color: #777663"><span class="fab fa-twitter" style="font-size: 20px; color:#8b6508;"></span>     Twitter</a><br>
+
+        </p>
+        			<hr class="foothr1" >
+      </div>
+
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-0">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-0" id="address">
+
+        <!-- Content -->
+        <h3 class="font-weight-bold" id="addhead">Registered Office</h3>
+        <p id="add">E-SHOPNOW INDIA PRIVATE LIMITED<br>1081, SOBHA PETUNIA APT<br>VEERANNAPALYA MAIN ROAD<br>NAGAWARA AC POST<br>BENGALURU- 560045<br>KA, INDIA</p>
+
+        <div class="mt-4 mb-2 payment">
+        	<span class="fab fa-cc-amazon-pay" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+        	
+        	<span class="fab fa-paypal" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+        	<span class="fab fa-cc-amex" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+        	<span class="fab fa-cc-mastercard" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+        	<span class="fab fa-cc-visa" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+        	 <span style="font-size: 30px; color:#8b6508; padding-left: 10px;"> <img src="images/bhim.png" style="padding-bottom: 12px;"></span>
+          <span style="font-size: 30px; color:#8b6508; padding-left: 10px;"> <img src="images/paytm.png" style="padding-bottom: 12px;"></span>
+
+
+
+
+        </div>
+
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3"><span><img src="images/logoed.png" class="footer" alt="Responsive image"></span>© 2020 Copyright:
+    <a href="https://www.instagram.com/aniket.das13/" target="_blank"> Aniket Das</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</body>

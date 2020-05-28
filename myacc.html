@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="images/icon.png" type="image/png">
+	<title>E-ShopNow- India's best footwear shopping website</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a0b568cb21.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<!-- Below is the initialization snippet for my Firebase project. It will vary for each project -->  
+ <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>  
+ 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA7r5EKmrIxtw_-Vxxuelcsf_i3Sgs-wmA",
+    authDomain: "e-shop-a7287.firebaseapp.com",
+    databaseURL: "https://e-shop-a7287.firebaseio.com",
+    projectId: "e-shop-a7287",
+    storageBucket: "e-shop-a7287.appspot.com",
+    messagingSenderId: "1042375309479",
+    appId: "1:1042375309479:web:e6248897b5b6544aee8382",
+    measurementId: "G-Q5RKB2XVE6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+
+<body id="body">
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+
+<script src="js/scriptacc.js"></script>
+
+<header>
+<nav class="navbar navbar-expand-sm navbar-dark navbar-static-top" style="background-color:#222222;z-index: 1;" id="menu" >
+<h1><br></h1>
+<a href="signedin.html" class="">
+          <div id="logo-img">
+            <img src="images/logoed.png" class="imag" alt="Responsive image">
+
+          </div>
+
+
+        </a>
+
+        <a href="cart.html" id="ph">
+       
+        <i class="fas fa-shopping-cart"></i></a>
+        
+
+        <div class="nav-brand">
+          <a href="signedin.html" id="h8">India's best footwear shopping website</a>
+
+          </div>
+
+
+   <div class="vl"></div>
+
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="background-color:#222222;">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active dropdown">
+       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: #FFFDD0;"> <span class="fas fa-user-circle" style="font-size: 40px; color:#8b6508; "></span><br>My Account</a>
+       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="index.html" style="color:#FFFDD0;">Sign-Out</a>
+          <a class="dropdown-item" href="myacc.html" style="color:#FFFDD0;">Update Info</a>
+          <a class="dropdown-item" href="myorder.html" style="color:#FFFDD0;">My Orders</a>
+        </div>
+      </li>
+      <li>
+        <a class="nav-link" href="signedin.html" style="color: #FFFDD0;"> <span class="fas fa-home" style="font-size: 40px; color:#8b6508; "></span><br>Home</a>
+      </li>
+            <li class="nav-item active">
+        <a class="nav-link" href="pnew.html" style="color: #FFFDD0;"><span class="fas fa-gift" style="font-size: 40px; color:#8b6508;"></span><br>New Arrivals</a>
+      </li>
+      
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFDD0;"><span class="fas fa-shopping-bag" style="font-size: 40px; color:#8b6508;"></span><br>
+          Shop
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+           <a class="dropdown-item" href="plist.html" style="color:#FFFDD0;">All Products</a>
+          <a class="dropdown-item" href="pwomen.html" style="color:#FFFDD0;">Women's</a>
+          <a class="dropdown-item" href="pmen.html" style="color:#FFFDD0;">Men's</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="psale.html" style="color:#FFFDD0;">Clearance Sale</a>
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-xs-2 mr-lg-2 mr-md-2 mr-sm-2" placeholder="Search for products" aria-label="Search" id="searchbox" style="background: #F3E5AB; color: #8b6508; ">
+
+      <button class="btn btn-outline-warning my-2 my-sm-0" id="searchbtn">Search</button>
+        </form>
+  </div>
+
+</nav>
+
+</header> 
+
+<h4 class="text-center pt-2 pb-2" id="hello" style="background-color: #222222; border-top: 1px solid #8b6508;"></h4>
+
+
+
+
+
+
+
+<h1 style="margin-top: 30px; text-align: center; color:#8b6508; text-shadow: 2px 1px #8b6508;">My Account</h1>
+
+
+
+<div class="jumbotron mt-4 d-none d-sm-block" id="jumbo" style="background: #222222;">
+
+  <div class="row">
+  <div class="col-3 " >
+    <div class="container pt-5 pb-5" style="border: 2px solid #8b6508; border-radius: 10px;">
+    <div class="nav flex-column nav-pills col" id="acc-tab" role="tablist" aria-orientation="vertical" >
+      <a class="nav-link active btn-outline-warning" id="acc-ue-tab" data-toggle="pill" href="#ue-detail" role="tab" aria-controls="ue-detail" aria-selected="true">Update email address</a>
+      <a class="nav-link btn-outline-warning" id="acc-up-tab" data-toggle="pill" href="#up-detail" role="tab" aria-controls="up-detail" aria-selected="false">Reset Password</a>
+      <a class="nav-link btn-outline-warning" id="acc-del-tab" data-toggle="pill" href="#del-detail" role="tab" aria-controls="del-detail" aria-selected="false"> Delete your account</a>
+      <a class="nav-link btn-outline-warning" id="acc-ve-tab" data-toggle="pill" href="#ve-detail" role="tab" aria-controls="ve-detail" aria-selected="false">Verify email address</a>
+    </div>
+  </div>
+  </div>
+  <div class="col-9 " >
+  <div class="container pt-5 pb-5" style="border: 2px solid #8b6508; border-radius: 10px;">
+
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="ue-detail" role="tabpanel" aria-labelledby="acc-ue-tab">
+        
+        <form>
+  <div class="form-group">
+    <label for="existemail">Enter existing email address</label>
+    <input type="email" class="form-control" id="existemail" aria-describedby="emailHelp" style="color: #8b6508; border-color: #222222; background-color: #F3E5AB;" >
+    
+  </div>
+<div class="form-group">
+    <label for="newemail">Enter new email address</label>
+    <input type="email" class="form-control" id="newemail" aria-describedby="emailHelp" style=" color: #8b6508; border-color: #222222; background-color: #F3E5AB;">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="confirmmail" >
+    <label class="form-check-label" for="confirmmail">Confirm the change</label>
+  </div>
+  <button type="submit" class="btn btn-outline-warning mt-2" id="ue-btn">Submit</button>
+</form>
+<h5 class="text-center" id="emessage"></h5>
+<hr style="height:2px; border-color: #8b6508;">
+<small id="emailHelp" class="form-text text-muted">Any credential changes will trigger a sign-out for security reasons. Please sign-in again with new credentials.</small>
+      </div>
+      <div class="tab-pane fade" id="up-detail" role="tabpanel" aria-labelledby="acc-up-tab">
+        
+
+            <h3>
+              Are you sure you want to reset your password?</h3> 
+              <h6>Clicking on the button below will send a password reset link to your email address.<h6>
+           <div class="text-center"><button class="btn btn-outline-warning mt-4" type="button" id="rpwd">
+         Reset Password
+        </button></div>
+
+        <h6 class="text-center mt-4" id="alert"></h6>
+
+
+
+
+
+      </div>
+      <div class="tab-pane fade" id="del-detail" role="tabpanel" aria-labelledby="acc-del-tab">
+        
+                <h3>
+              We are sad to see you go! Are you sure you want to delete your account?</h3> 
+              <h6>Clicking on the button below will erase all your account information from E-ShopNow.<h6>
+           <div class="text-center"><button class="btn btn-outline-warning mt-4" type="button" id="delacc">
+         Delete Account
+        </button></div>
+
+        <h6 class="text-center mt-4" id="alertacc"></h6>
+
+
+      </div>
+      <div class="tab-pane fade" id="ve-detail" role="tabpanel" aria-labelledby="acc-ve-tab">
+        
+                    <h3 id="check">
+                            </h3> 
+              <h6 id="check2"> <h6>
+           <div class="text-center"><button class="btn btn-outline-warning mt-4" type="button" id="vemail" style="visibility: hidden;">
+         Verify Email
+        </button></div>
+
+        <h6 class="text-center mt-4" id="alertv"></h6>
+
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+</div>
+
+
+
+<div class="jumbotron mt-4 d-block d-sm-none" id="jumbo" style="background: #222222;">
+<div class="container">
+
+  <div class="accordion" id="accordionExample">
+  <div class="card"  style="border:2px solid #8b6508; border-bottom:2px solid #222222">
+    <div class="card-header bg-dark text-center" id="ue-lbl" >
+      <h2 class="mb-0">
+        <button class="btn btn-outline-warning " type="button" data-toggle="collapse" data-target="#ue-xs" aria-expanded="true" aria-controls="ue-xs">
+         Update email address
+        </button>
+      </h2>
+    </div>
+    <div id="ue-xs" class="collapse" aria-labelledby="ue-lbl" data-parent="#accordionExample">
+      <div class="card-body">
+
+
+        <form>
+  <div class="form-group">
+    <label for="existemail">Enter existing email address</label>
+    <input type="email" class="form-control" id="existemail-xs" aria-describedby="emailHelp" style="color: #8b6508; border-color: #222222; background-color: #F3E5AB;" >
+    
+  </div>
+<div class="form-group">
+    <label for="newemail">Enter new email address</label>
+    <input type="email" class="form-control" id="newemail-xs" aria-describedby="emailHelp" style=" color: #8b6508; border-color: #222222; background-color: #F3E5AB;">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="confirmmail-xs" >
+    <label class="form-check-label" for="confirmmail">Confirm the change</label>
+  </div>
+  <button type="submit" class="btn btn-outline-warning mt-2" id="ue-btn-xs">Submit</button>
+</form>
+<h5 class="text-center mt-2" id="emessage-xs"></h5>
+<hr style="height:2px; border-color: #8b6508;">
+<small id="emailHelp" class="form-text text-muted">Any credential changes will trigger a sign-out for security reasons. Please sign-in again with new credentials.</small>
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="card"  style="border: 2px solid #222222; border-left:2px solid #8b6508; border-right:2px solid #8b6508;">
+    <div class="card-header bg-dark text-center" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-outline-warning collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Reset Password
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+       
+
+              <h3>
+              Are you sure you want to reset your password?</h3> 
+              <h6>Clicking on the button below will send a password reset link to your email address.<h6>
+           <div class="text-center"><button class="btn btn-outline-warning mt-4" type="button" id="rpwd-xs">
+         Reset Password
+        </button></div>
+
+        <h6 class="text-center mt-4" id="alert-xs"></h6>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="card"  style="border: 2px solid #222222; border-left:2px solid #8b6508; border-right:2px solid #8b6508;">
+    <div class="card-header bg-dark text-center" id="headingThree" >
+      <h2 class="mb-0">
+        <button class="btn btn-outline-warning collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Delete your account
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+       
+            <h3>
+              We are sad to see you go! Are you sure you want to delete your account?</h3> 
+              <h6>Clicking on the button below will erase all your account information from E-ShopNow.<h6>
+           <div class="text-center"><button class="btn btn-outline-warning mt-4" type="button" id="delacc-xs">
+         Delete Account
+        </button></div>
+
+        <h6 class="text-center mt-4" id="alertacc-xs"></h6>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card"  style="border:2px solid #8b6508; border-top:2px solid #222222;">
+    <div class="card-header bg-dark text-center" id="headingFour" >
+      <h2 class="mb-0">
+        <button class="btn btn-outline-warning collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="acc-ve-btn">
+          Verify email address
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+       
+
+            <h3 id="check-xs">
+                            </h3> 
+              <h6 id="check2-xs"> <h6>
+           <div class="text-center"><button class="btn btn-outline-warning mt-4" type="button" id="vemail-xs" style="visibility: hidden;">
+         Verify Email
+        </button></div>
+
+        <h6 class="text-center mt-4" id="alertv-xs"></h6>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4" style=" background-color: #222222">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-0">
+
+        <!-- Content -->
+        <p id="hmm"><a style="text-decoration:none; color: #FFFDD0;" href="aboutus.html" > About Us</a></br>
+        <a style="text-decoration:none; color: #FFFDD0;" href="contact.html">Contact Us</a><br>
+        <a style="text-decoration:none; color: #FFFDD0;" href="index.html">Sign Out</a></p>
+    
+        <hr class="foothr" >
+        <h3 class="font-weight-bold" id="hmm">Follow Us! </h3>
+        <p id="hmm">
+        	<a href="https://www.facebook.com/aniket.das13" target="_blank" style="text-decoration:none; color: #777663"><span class="fab fa-facebook-square" style="font-size: 20px; color:#8b6508;"></span>     Facebook</a><br>
+        	<a href="https://www.instagram.com/aniket.das13/" target="_blank"  style="text-decoration:none; color: #777663"><span class="fab fa-instagram" style="font-size: 20px; color:#8b6508;"></span>     Instagram</a><br>
+        	<a href="https://www.twitter.com/aniket_das13" target="_blank" style="text-decoration:none; color: #777663"><span class="fab fa-twitter" style="font-size: 20px; color:#8b6508;"></span>     Twitter</a><br>
+
+        </p>
+        			<hr class="foothr1" >
+      </div>
+
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-0">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-0" id="address">
+
+        <!-- Content -->
+        <h3 class="font-weight-bold" id="addhead">Registered Office</h3>
+        <p id="add">E-SHOPNOW INDIA PRIVATE LIMITED<br>1081, SOBHA PETUNIA APT<br>VEERANNAPALYA MAIN ROAD<br>NAGAWARA AC POST<br>BENGALURU- 560045<br>KA, INDIA</p>
+
+        <div class="mt-4 mb-2 payment">
+        	<span class="fab fa-cc-amazon-pay" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+        	
+        	<span class="fab fa-paypal" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+        	<span class="fab fa-cc-amex" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+        	<span class="fab fa-cc-mastercard" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+        	<span class="fab fa-cc-visa" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+        	 <span style="font-size: 30px; color:#8b6508; padding-left: 10px;"> <img src="images/bhim.png" style="padding-bottom: 12px;"></span>
+          <span style="font-size: 30px; color:#8b6508; padding-left: 10px;"> <img src="images/paytm.png" style="padding-bottom: 12px;"></span>
+
+
+
+
+        </div>
+
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3"><span><img src="images/logoed.png" class="footer" alt="Responsive image"></span>© 2020 Copyright:
+    <a href="https://www.instagram.com/aniket.das13/" target="_blank"> Aniket Das</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</body>

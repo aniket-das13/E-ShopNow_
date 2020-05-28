@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+ <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>  
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA7r5EKmrIxtw_-Vxxuelcsf_i3Sgs-wmA",
+    authDomain: "e-shop-a7287.firebaseapp.com",
+    databaseURL: "https://e-shop-a7287.firebaseio.com",
+    projectId: "e-shop-a7287",
+    storageBucket: "e-shop-a7287.appspot.com",
+    messagingSenderId: "1042375309479",
+    appId: "1:1042375309479:web:e6248897b5b6544aee8382",
+    measurementId: "G-Q5RKB2XVE6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="images/icon.png" type="image/png">
+  <title>E-ShopNow- India's best footwear shopping website</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+<link href="css/nouislider.css" rel="stylesheet">
+<script src="js/nouislider.js"></script>
+
+
+<script src="https://kit.fontawesome.com/a0b568cb21.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body id="body">
+	
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  
+  <script src="js/bootstrap.min.js"></script>
+
+<script src="js/scriptpwomen.js"></script>
+
+<header>
+<nav class="navbar navbar-expand-sm navbar-dark navbar-static-top" style="background-color:#222222;z-index: 1;" id="menu" >
+<h1><br></h1>
+<a href="signedin.html" class="">
+          <div id="logo-img">
+            <img src="images/logoed.png" class="imag" alt="Responsive image">
+
+          </div>
+
+
+        </a>
+
+        <a href="cart.html" id="ph">
+        
+        <i class="fas fa-shopping-cart"></i></a>
+        
+
+        <div class="nav-brand">
+          <a href="signedin.html" id="h8">India's best footwear shopping website</a>
+
+          </div>
+
+
+   <div class="vl"></div>
+
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="background-color:#222222;">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active dropdown">
+       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: #FFFDD0;"> <span class="fas fa-user-circle" style="font-size: 40px; color:#8b6508; "></span><br>My Account</a>
+       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="index.html" style="color:#FFFDD0;">Sign-Out</a>
+          <a class="dropdown-item" href="myacc.html" style="color:#FFFDD0;">Update Info</a>
+          <a class="dropdown-item" href="myorder.html" style="color:#FFFDD0;">My Orders</a>
+        </div>
+      </li>
+      <li>
+        <a class="nav-link" href="signedin.html" style="color: #FFFDD0;"> <span class="fas fa-home" style="font-size: 40px; color:#8b6508; "></span><br>Home</a>
+      </li>
+            <li class="nav-item active">
+        <a class="nav-link" href="pnew.html" style="color: #FFFDD0;"><span class="fas fa-gift" style="font-size: 40px; color:#8b6508;"></span><br>New Arrivals</a>
+      </li>
+      
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFDD0;"><span class="fas fa-shopping-bag" style="font-size: 40px; color:#8b6508;"></span><br>
+          Shop
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+           <a class="dropdown-item" href="plist.html" style="color:#FFFDD0;">All Products</a>
+          <a class="dropdown-item" href="pwomen.html" style="color:#FFFDD0;">Women's</a>
+          <a class="dropdown-item" href="pmen.html" style="color:#FFFDD0;">Men's</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="psale.html" style="color:#FFFDD0;">Clearance Sale</a>
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-xs-2 mr-lg-2 mr-md-2 mr-sm-2" placeholder="Search for products" aria-label="Search" id="searchbox" style="background: #F3E5AB; color: #8b6508; ">
+
+      <button class="btn btn-outline-warning my-2 my-sm-0" id="searchbtn">Search</button>
+    </form>
+  </div>
+
+</nav>
+
+</header> 
+
+
+
+<h4 class="text-center pt-2 pb-2" id="hello" style="background-color: #222222; border-top: 1px solid #8b6508;"></h4>
+
+
+<h1 style="margin-top: 10px; text-align: center; color:#8b6508; text-shadow: 2px 1px #8b6508; ">For Women</h1>
+<div class="container-fluid pt-2 mb-4 pb-4"  style="border-radius: 10px; ">
+
+
+
+
+
+
+
+
+
+
+ <div class="row">
+
+      <div class="col-lg-3 col-md-3  pl-0 pr-0" style="background: #3b3c36;  border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+
+<div class="accordion " id="accordionmain">
+  <div class="card" style="border: 0px solid #8b6508;">
+    <div class="card-header text-center" id="headingmain" style="background:#222222;">
+      <h2 class="mb-0">
+        <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapsemain" aria-expanded="true" aria-controls="collapsemain" style="color:#8b6508;border: 2px solid #8b6508; border-radius:16px; text-shadow: 1px 1px #8b6508; font-size: 0.6em;"><i class="fas fa-filter mr-2"></i>
+          Product Filter
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapsemain" class="collapse show" aria-labelledby="headingmain" data-parent="#accordionmain">
+      <div class="card-body">
+        <div class="container" style="color: #8b6508; font-size: 1.3em;" >
+<div id="accordion">
+  <div class="card mb-2" style="background-color:#f3e5ab; border-radius: 10px; ">
+    <div class="card-header pt-1 pb-1" id="headgender" style="background-color:#f3e5ab; border-radius: 10px; ">
+      <h5 class="mb-0">
+        <button class="btn" data-toggle="collapse" data-target="#gender" aria-expanded="true" aria-controls="gender" style="color:#8b6508;font-size: 1.2em; text-shadow: 1px 1px #8b6508;">
+          Gender
+        </button>
+      </h5>
+    </div>
+
+    <div id="gender" class="collapse" aria-labelledby="headgender" data-parent="#accordion">
+        
+ <div class="card-body pt-1" style="background-color:#f3e5ab; border-radius: 10px; border-top: 2px solid #8b6508;">
+    
+    
+              <div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('gender','==','Women')" id="genderwomen" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="genderwomen">
+    Women
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('gender','==','Men')" id="gendermen" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="gendermen">
+  Men
+  </label>
+</div>
+
+
+  </div>
+</div>
+  </div>
+
+
+<div class="card mb-2" style="background-color:#f3e5ab; border-radius: 10px; ">
+    <div class="card-header pt-1 pb-1" id="headbrand" style="background-color:#f3e5ab; border-radius: 10px; ">
+      <h5 class="mb-0">
+        <button class="btn" data-toggle="collapse" data-target="#brand" aria-expanded="true" aria-controls="brand" style="color:#8b6508;font-size: 1.2em; text-shadow: 1px 1px #8b6508;">
+          Brand
+        </button>
+      </h5>
+    </div>
+
+    <div id="brand" class="collapse" aria-labelledby="headbrand" data-parent="#accordion">
+        
+ <div class="card-body pt-1" style="background-color:#f3e5ab; border-radius: 10px; border-top: 2px solid #8b6508;">
+    
+    <div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('brand','==','ESN')" id="brandESN" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="brandESN">
+    ESN
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('brand','==','Hype By ESN')" id="brandHype" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="brandHype">
+  Hype by ESN
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('brand','==','Nike')" id="brandNike" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="brandNike">
+  Nike
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('brand','==','Skechers')" id="brandSkechers" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="brandSkechers">
+  Skechers
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('brand','==','UCB')" id="brandUCB" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="brandUCB">
+  UCB
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('brand','==','Puma')" id="brandPuma" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="brandPuma">
+  Puma
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('brand','==','Hush Puppies')" id="brandHP" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="brandHP">
+  Hush Puppies
+  </label>
+</div>
+
+
+
+  </div>
+</div>
+  </div>
+
+<div class="card mb-2" style="background-color:#f3e5ab; border-radius: 10px; ">
+    <div class="card-header pt-1 pb-1" id="headcolour" style="background-color:#f3e5ab; border-radius: 10px; ">
+      <h5 class="mb-0">
+        <button class="btn" data-toggle="collapse" data-target="#colour" aria-expanded="true" aria-controls="colour" style="color:#8b6508;font-size: 1.2em; text-shadow: 1px 1px #8b6508;">
+          Colour
+        </button>
+      </h5>
+    </div>
+
+    <div id="colour" class="collapse" aria-labelledby="headcolour" data-parent="#accordion">
+        
+ <div class="card-body pt-1" style="background-color:#f3e5ab; border-radius: 10px; border-top: 2px solid #8b6508;">
+    
+    
+              <div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('colour','==','Dark Blue')" id="colourdb" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="colourdb">
+    Dark Blue
+    <img class="ml-1 mb-1" src="images/darkblue.png" style="width: 15px; height: 15px;">
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('colour','==','Navy Blue')" id="colournb" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="colournb">
+  Navy Blue
+  <img class="ml-1 mb-1" src="images/navyblue.jpg" style="width: 15px; height: 15px;"> 
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('colour','==','Burgandy')" id="colourburg" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="colourburg">
+  Burgandy
+  <img class="ml-1 mb-1" src="images/burgandy.png" style="width: 15px; height: 15px;">
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('colour','==','Black')" id="colourblack" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="colourblack">
+  Black
+  <img class="ml-1 mb-1" src="images/black.png" style="width: 15px; height: 15px;">
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('colour','==','Colourful')" id="colourcol" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="colourcol">
+  Colourful
+  <img class="ml-1 mb-1" src="images/colourful.png" style="width: 15px; height: 15px;">
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('colour','==','Baby Pink')" id="colourbp" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="colourbp">
+  Baby Pink
+  <img class="ml-1 mb-1" src="images/babypink.jpg" style="width: 15px; height: 15px;">
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('colour','==','Gray')" id="colourgray" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="colourgray">
+  Gray
+  <img class="ml-1 mb-1" src="images/gray.png" style="width: 15px; height: 15px;">
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('colour','==','Beige')" id="colourbeige" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="colourbeige">
+  Beige
+  <img class="ml-1 mb-1" src="images/beige.png" style="width: 15px; height: 15px;">
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('colour','==','Brown')" id="colourbrown" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="colourbrown">
+  Brown
+  <img class="ml-1 mb-1" src="images/brown.png" style="width: 15px; height: 15px;">
+  </label>
+</div>
+
+  </div>
+</div>
+  </div>
+
+
+
+
+<div class="card mb-2" style="background-color:#f3e5ab; border-radius: 10px; ">
+    <div class="card-header pt-1 pb-1" id="headsize" style="background-color:#f3e5ab; border-radius: 10px; ">
+      <h5 class="mb-0">
+        <button class="btn" data-toggle="collapse" data-target="#size" aria-expanded="true" aria-controls="size" style="color:#8b6508;font-size: 1.2em; text-shadow: 1px 1px #8b6508;">
+          Size (UK)
+        </button>
+      </h5>
+    </div>
+
+    <div id="size" class="collapse" aria-labelledby="headsize" data-parent="#accordion">
+        
+ <div class="card-body pt-1" style="background-color:#f3e5ab; border-radius: 10px; border-top: 2px solid #8b6508;">
+    
+     <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="size5" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="size5">
+    5
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="size6" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="size6">
+  6
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="size7" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="size7">
+  7
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="size8" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="size8">
+  8
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="size9" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="size9">
+  9
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="size10" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="size10">
+  10
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="size11" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="size11">
+  11
+  </label>
+</div>
+
+
+
+
+  </div>
+</div>
+  </div>
+
+
+
+<div class="card mb-2" style="background-color:#f3e5ab; border-radius: 10px; ">
+    <div class="card-header pt-1 pb-1" id="headdisc" style="background-color:#f3e5ab; border-radius: 10px; ">
+      <h5 class="mb-0">
+        <button class="btn" data-toggle="collapse" data-target="#disc" aria-expanded="true" aria-controls="disc" style="color:#8b6508;font-size: 1.2em; text-shadow: 1px 1px #8b6508;">
+          Discount
+        </button>
+      </h5>
+    </div>
+
+    <div id="disc" class="collapse" aria-labelledby="headdisc" data-parent="#accordion">
+        
+ <div class="card-body pt-1" style="background-color:#f3e5ab; border-radius: 10px; border-top: 2px solid #8b6508;">
+    
+     <div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('disc','==','10')" id="disc10" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="disc10">
+    10%
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('disc','==','20')" id="disc20" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="disc20">
+  20%
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('disc','==','30')" id="disc30" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="disc30">
+  30%
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value=".where('disc','==','40')" id="disc40" style="width:20px;height:20px;">
+  <label class="form-check-label ml-2" for="disc40">
+  40%
+  </label>
+</div>
+
+
+       
+
+
+
+  </div>
+</div>
+  </div>
+<div class="card mb-2" style="background-color:#f3e5ab; border-radius: 10px; ">
+    <div class="card-header pt-1 pb-1" id="headprice" style="background-color:#f3e5ab; border-radius: 10px; ">
+      <h5 class="mb-0">
+        <button class="btn" data-toggle="collapse" data-target="#price" aria-expanded="true" aria-controls="price" style="color:#8b6508;font-size: 1.2em; text-shadow: 1px 1px #8b6508;">
+          Price (₹)
+        </button>
+      </h5>
+    </div>
+
+    <div id="price" class="collapse" aria-labelledby="headprice" data-parent="#accordion">
+        
+ <div class="card-body pt-1" style="background-color:#f3e5ab; border-radius: 10px; border-top: 2px solid #8b6508;">
+    
+
+<div id="slider" style="margin-top: 40px;"></div>
+
+
+
+
+  </div>
+</div>
+  </div>
+
+
+<div class="text-center mt-4">
+<button class="btn btn-warning text-center mb-2 " id="filter" style="border-radius: 16px;">Apply Filter</button>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+                     </div>        
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+        
+      </div>
+
+
+
+
+
+
+      <div class="col-lg-9 col-md-9 col-sm-12">
+
+
+        
+        <div class="container aboutus" style="background: none;">
+
+          <div class="pt-4 mb-4 pb-4 text-center" style="font-size:2em; color: #8b6508; background: #F3E5AB; border-radius: 10px; border:5px solid #8b6508;" id="noitem">
+ <div><i class="far fa-frown" style="font-size: 8em;"></i></div> 
+<div>
+  Sorry! We could not find anything.  
+</div>
+</div>
+
+        
+                      <div class="row" id="r">
+                
+                
+
+                      </div>
+
+
+        </div>
+      </div>
+
+
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<footer class="page-footer font-small teal pt-4" style="width: 100%; background-color: #222222;">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-0 mb-2">
+
+        <!-- Content -->
+        <p id="hmm"><a style="text-decoration:none; color: #FFFDD0;" href="aboutus.html" > About Us</a></br>
+        <a style="text-decoration:none; color: #FFFDD0;" href="contact.html">Contact Us</a><br>
+        <a style="text-decoration:none; color: #FFFDD0;" href="index.html">Sign Out</a></p>
+    
+        <hr class="foothr" >
+        <h3 class="font-weight-bold" id="hmm">Follow Us! </h3>
+        <p id="hmm">
+          <a href="https://www.facebook.com/aniket.das13" target="_blank" style="text-decoration:none; color: #777663"><span class="fab fa-facebook-square" style="font-size: 20px; color:#8b6508;"></span>     Facebook</a><br>
+          <a href="https://www.instagram.com/aniket.das13/" target="_blank"  style="text-decoration:none; color: #777663"><span class="fab fa-instagram" style="font-size: 20px; color:#8b6508;"></span>     Instagram</a><br>
+          <a href="https://www.twitter.com/aniket_das13" target="_blank" style="text-decoration:none; color: #777663"><span class="fab fa-twitter" style="font-size: 20px; color:#8b6508;"></span>     Twitter</a><br>
+
+        </p>
+<hr class="foothr1" >
+      </div>
+
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-0">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-0">
+
+        <!-- Content -->
+        <h3 class="font-weight-bold" id="addhead">Registered Office</h3>
+        <p id="add">E-SHOPNOW INDIA PRIVATE LIMITED<br>1081, SOBHA PETUNIA APT<br>VEERANNAPALYA MAIN ROAD<br>NAGAWARA AC POST<br>BENGALURU- 560045<br>KA, INDIA</p>
+
+        <div class="mt-4 mb-2 payment">
+          <span class="fab fa-cc-amazon-pay" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+          <span class="fab fa-paypal" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+          <span class="fab fa-cc-amex" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+          <span class="fab fa-cc-mastercard" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+          <span class="fab fa-cc-visa" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+          <span style="font-size: 30px; color:#8b6508; padding-left: 10px;"> <img src="images/bhim.png" style="padding-bottom: 12px;"></span>
+          <span style="font-size: 30px; color:#8b6508; padding-left: 10px;"> <img src="images/paytm.png" style="padding-bottom: 12px;"></span>
+
+
+
+        </div>
+
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3"><span><img src="images/logoed.png" class="footer" alt="Responsive image"></span>© 2020 Copyright:
+    <a href="https://www.instagram.com/aniket.das13/" target="_blank"> Aniket Das</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+
+
+</body>
+</html>

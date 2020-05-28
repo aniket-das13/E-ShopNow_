@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+ <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>  
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA7r5EKmrIxtw_-Vxxuelcsf_i3Sgs-wmA",
+    authDomain: "e-shop-a7287.firebaseapp.com",
+    databaseURL: "https://e-shop-a7287.firebaseio.com",
+    projectId: "e-shop-a7287",
+    storageBucket: "e-shop-a7287.appspot.com",
+    messagingSenderId: "1042375309479",
+    appId: "1:1042375309479:web:e6248897b5b6544aee8382",
+    measurementId: "G-Q5RKB2XVE6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="images/icon.png" type="image/png">
+  <title>E-ShopNow- India's best footwear shopping website</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a0b568cb21.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body id="body">
+	
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  
+  <script src="js/bootstrap.min.js"></script>
+
+<script src="js/scriptp.js"></script>
+
+<header>
+<nav class="navbar navbar-expand-sm navbar-dark navbar-static-top" style="background-color:#222222;z-index: 1;" id="menu" >
+<h1><br></h1>
+<a href="signedin.html" class="">
+          <div id="logo-img">
+            <img src="images/logoed.png" class="imag" alt="Responsive image">
+
+          </div>
+
+
+        </a>
+
+        <a href="cart.html" id="ph">
+        
+        <i class="fas fa-shopping-cart"></i></a>
+        
+
+        <div class="nav-brand">
+          <a href="signedin.html" id="h8">India's best footwear shopping website</a>
+
+          </div>
+
+
+   <div class="vl"></div>
+
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="background-color:#222222;">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active dropdown">
+       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: #FFFDD0;"> <span class="fas fa-user-circle" style="font-size: 40px; color:#8b6508; "></span><br>My Account</a>
+       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="index.html" style="color:#FFFDD0;">Sign-Out</a>
+          <a class="dropdown-item" href="myacc.html" style="color:#FFFDD0;">Update Info</a>
+          <a class="dropdown-item" href="myorder.html" style="color:#FFFDD0;">My Orders</a>
+        </div>
+      </li>
+      <li>
+        <a class="nav-link" href="signedin.html" style="color: #FFFDD0;"> <span class="fas fa-home" style="font-size: 40px; color:#8b6508; "></span><br>Home</a>
+      </li>
+            <li class="nav-item active">
+        <a class="nav-link" href="pnew.html" style="color: #FFFDD0;"><span class="fas fa-gift" style="font-size: 40px; color:#8b6508;"></span><br>New Arrivals</a>
+      </li>
+      
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFDD0;"><span class="fas fa-shopping-bag" style="font-size: 40px; color:#8b6508;"></span><br>
+          Shop
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <a class="dropdown-item" href="plist.html" style="color:#FFFDD0;">All Products</a>
+          <a class="dropdown-item" href="pwomen.html" style="color:#FFFDD0;">Women's</a>
+          <a class="dropdown-item" href="pmen.html" style="color:#FFFDD0;">Men's</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="psale.html" style="color:#FFFDD0;">Clearance Sale</a>
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+     <input class="form-control mr-xs-2 mr-lg-2 mr-md-2 mr-sm-2" placeholder="Search for products" aria-label="Search" id="searchbox" style="background: #F3E5AB; color: #8b6508; ">
+
+      <button class="btn btn-outline-warning my-2 my-sm-0" id="searchbtn">Search</button>
+        </form>
+  </div>
+
+</nav>
+
+</header> 
+
+
+
+<h4 class="text-center pt-2 pb-2" id="hello" style="background-color: #222222; border-top: 1px solid #8b6508;"></h4>
+
+
+
+
+
+
+<div class="jumbotron" id="jumbo" style="background: none; padding: 5px;" >
+  
+  <div class="row">
+      
+      <div class="col-md-5">
+
+       
+                <img id="footwearpic"src="" style="width: 100%; height: auto; border:5px solid #8b6508; border-radius: 10px;">
+
+      </div>
+      <div class="col-md-7">
+
+        
+        <div class="container aboutus" style="background-color: #F3E5AB; color:#8b6508; border:5px solid #8b6508; border-radius: 10px;">
+
+                  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb"  style="background: #F3E5AB; font-size: 0.8em; width: 100%; padding-left: 0px;padding-bottom: 0px;margin-bottom: 2px;">
+    <li class="breadcrumb-item"><a href="signedin.html">Home</a></li>
+    <li class="breadcrumb-item"><a href="plist.html">Our Products</a></li>
+    <li class="breadcrumb-item active" aria-current="page" id="product_name">Hello</li>
+  </ol>
+</nav>
+
+                <section id="product_brand"></section>
+                  <h1 id="product_desc"></h1>
+                  <a class="btn btn-warning disabled" style="border-radius: 16px;"><span id="product_rating"> </span><i class="fas fa-star"></i></a>
+
+                   <div class="row">
+                    <div class="col-sm-6">
+                     <h2 class="mt-4 mb-0"><s id="oldrate" style="color: #777663; opacity: 50%; display:none;"> <br></s><span id="product_price">  </span></h2>
+                      <small style="color:#777663; font-size: 1em; margin-top: 0px;">Inclusive of all taxes</small>
+
+                      <div class="mt-4"><select class="custom-select" id="product_size" style="width:60%;background:#F3E5AB; color:#8b6508; border:2px solid #8b6508; border-radius: 16px;">
+                        
+                               <option value="NA" selected>Select your size</option>
+</select></div>
+                       
+
+                        <div ><br><select class="custom-select" id="product_qty" style="width:60%;background:#F3E5AB; color:#8b6508; border:2px solid #8b6508; border-radius: 16px;">
+                        
+                               <option value="NA" selected>Select Quantity</option>
+                               <option value=1>1 Pair</option>
+                               <option value=2>2 Pairs</option>
+                               <option value=3>3 Pairs</option>
+                               <option value=4>4 Pairs</option>
+                               <option value=5>5 Pairs</option>
+                               <option value=6>6 Pairs</option>
+                               <option value=7>7 Pairs</option>
+                               <option value=8>8 Pairs</option>
+                               <option value=9>9 Pairs</option>
+                               <option value=10>10 Pairs</option>
+                               
+</select></div> 
+                      <div class="mt-4" style="font-size: 2em;">
+                        <h2 id="instock" style="color: green; text-shadow: 1px 1px #777663; display: none;"> <i class="fas fa-check-circle mr-2"></i>Available</h2>
+                        <h2 id="sellingout" style="color: orange; text-shadow: 1px 1px #777663; display:none;"> <i class="fas fa-exclamation-circle mr-2"></i>Only a few left!</h2>
+                        <h2 id="outofstock" style="color: red; text-shadow: 1px 1px #777663; display: none;"> <i class="fas fa-frown mr-2"></i>Out Of Stock</h2>
+
+                      </div>
+
+
+                      <div><button class="btn btn-warning mt-4 " disabled id="addtocart" data-target="#alertmodal" style=" border:2px solid #8b6508 ;color:#8b6508 ;border-radius: 16px; font-size: 1.5em;"><i class="fas fa-shopping-cart mr-3"></i>Add To Cart</button></div>
+
+                        <div><button class="btn mt-4" disabled id="buynow" style=" border:2px solid #8b6508 ; background:orange;color:white ;border-radius: 16px; font-size: 1.5em;"><i class="fas fa-bolt mr-3"></i>Buy Now</button></div>
+
+
+
+<div class="modal fade" id="alertmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="border-radius: 10px; border: 3px solid #8b6508;">
+    <div class="modal-content"  style="background:#f0b01a; color: #8b6508;">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        Product is successfully added to the cart.<br>Continue Shopping!
+        
+      </div>     
+    </div>
+  </div>
+</div>
+                      
+
+                      <div class="mt-4" id="offervisible" style="display: none;">
+                        <h4 style="text-shadow: 1px 1px #8b6508">Available offers</h4><i class="fas fa-tag mr-3"></i><span id="product_disc">20% Discount</span>
+                      </div>
+                         </div>
+                      <div class="col-sm-6">
+                                        <div class="container mt-4 pt-2 " style="border:2px solid #8b6508; border-radius: 10px;">
+                                        <span><img id="product_logo" src="" style="max-width:100px; max-height: auto;"><p class="pt-2 text-left">This is a genuine product of <span  id="product_warranty"></span>. The product comes with a standard brand warranty of 180 days.</p> </span> 
+
+
+                                          <h4 class="mt-4" style="text-shadow: 1px 1px #8b6508">Services</h4>
+                                           <hr style="color:#8b6508; border: 1px solid #8b6508;">
+                                           <i class="fas fa-shield-alt mr-2"></i>ESN Assurance 
+                                          <br> <i class="fas fa-undo-alt mr-2"></i>30 Day Return Policy
+                                          <br> <i class="fas fa-money-bill-alt mr-2"></i>Cash on Delivery Available </p>
+
+
+
+                                      </div>
+
+
+                         </div>
+                                           </div>
+
+                    <hr style="color:#8b6508; border: 3px solid #8b6508;">
+<h2 class="mt-4" style="text-shadow: 1px 1px #8b6508">Product Details</h2>
+  
+                      <table class="table table-striped table-borderless">
+                        <thead>
+    <tr style="border:none">
+      <th scope="col-6"></th>
+      <th scope="col-6"></th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Product code</td>
+      <td id="product_d_id"></td>
+    </tr>
+    <tr>
+      <td>Brand</td>
+      <td id="product_d_brand"></td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td id="product_d_desc"></td>
+    </tr>
+    <tr>
+      <td>Category</td>
+      <td id="product_d_cat"></td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td id="product_d_gen"></td>
+    </tr>
+    <tr>
+      <td>Colour</td>
+      <td id="product_d_colour"></td>
+    </tr>
+    <tr>
+      <td>Weight</td>
+      <td id="product_d_weight"></td>
+    </tr>
+    <tr>
+      <td>Warranty</td>
+      <td>180 Days</td>
+    </tr>
+    <tr>
+      <td>Imported and Manufactured By</td>
+      <td id="product_d_war"></td>
+    </tr>
+  </tbody>
+</table>
+
+                   </div> 
+                     
+
+
+        </div>
+      </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="page-footer font-small teal pt-4" style="width: 100%; background-color: #222222;">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-0 mb-2">
+
+        <!-- Content -->
+        <p id="hmm"><a style="text-decoration:none; color: #FFFDD0;" href="aboutus.html" > About Us</a></br>
+        <a style="text-decoration:none; color: #FFFDD0;" href="contact.html">Contact Us</a><br>
+        <a style="text-decoration:none; color: #FFFDD0;" href="index.html">Sign Out</a></p>
+    
+        <hr class="foothr" >
+        <h3 class="font-weight-bold" id="hmm">Follow Us! </h3>
+        <p id="hmm">
+          <a href="https://www.facebook.com/aniket.das13" target="_blank" style="text-decoration:none; color: #777663"><span class="fab fa-facebook-square" style="font-size: 20px; color:#8b6508;"></span>     Facebook</a><br>
+          <a href="https://www.instagram.com/aniket.das13/" target="_blank"  style="text-decoration:none; color: #777663"><span class="fab fa-instagram" style="font-size: 20px; color:#8b6508;"></span>     Instagram</a><br>
+          <a href="https://www.twitter.com/aniket_das13" target="_blank" style="text-decoration:none; color: #777663"><span class="fab fa-twitter" style="font-size: 20px; color:#8b6508;"></span>     Twitter</a><br>
+
+        </p>
+<hr class="foothr1" >
+      </div>
+
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-0">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-0">
+
+        <!-- Content -->
+        <h3 class="font-weight-bold" id="addhead">Registered Office</h3>
+        <p id="add">E-SHOPNOW INDIA PRIVATE LIMITED<br>1081, SOBHA PETUNIA APT<br>VEERANNAPALYA MAIN ROAD<br>NAGAWARA AC POST<br>BENGALURU- 560045<br>KA, INDIA</p>
+
+        <div class="mt-4 mb-2 payment">
+          <span class="fab fa-cc-amazon-pay" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+          <span class="fab fa-paypal" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+          <span class="fab fa-cc-amex" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+          <span class="fab fa-cc-mastercard" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+          <span class="fab fa-cc-visa" style="font-size: 30px; color:#8b6508; padding-left: 10px;"></span>
+          <span style="font-size: 30px; color:#8b6508; padding-left: 10px;"> <img src="images/bhim.png" style="padding-bottom: 12px;"></span>
+          <span style="font-size: 30px; color:#8b6508; padding-left: 10px;"> <img src="images/paytm.png" style="padding-bottom: 12px;"></span>
+
+
+
+        </div>
+
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3"><span><img src="images/logoed.png" class="footer" alt="Responsive image"></span>© 2020 Copyright:
+    <a href="https://www.instagram.com/aniket.das13/" target="_blank"> Aniket Das</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+
+
+</body>
+</html>
