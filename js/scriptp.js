@@ -404,7 +404,7 @@ db.collection("plist").doc("1").delete().then(function() {
 }).catch(function(error) {
     console.error("Error removing document: ", error);
 });
-},2000);
+},30000);
 
 
 
