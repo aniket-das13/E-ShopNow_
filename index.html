@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="icon" href="./images/icon.png" type="image/png">
+<link rel="icon" href="images/icon.png" type="image/png">
 	<title>E-ShopNow- India's best footwear shopping website</title>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/a0b568cb21.js" crossorigin="anonymous"></script>
@@ -80,7 +80,7 @@
       </div>
       <div class="modal-body" >
                 
-            <img src="./images/logoed.png" alt="Responsive image" style="margin-left:25%;">
+            <img src="images/logoed.png" alt="Responsive image" style="margin-left:25%;">
 
                   <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist" style="border-color:#8b6508; ">
@@ -99,8 +99,17 @@
   </div>
   <div class="form-group">
     <label for="signinpwd">Password</label>
-    <input type="password" class="form-control" id="signinpwd" style="background: #F3E5AB; color: #8b6508; border-color: #222222;">
+    <div class="input-group" id="show_hide_password">
+     <input type="password" class="form-control" id="signinpwd" style="background: #F3E5AB; color: #8b6508; border-color: #222222;">
+      <div class="input-group-addon">
+        <a class="btn btn-outline-warning" style="border:0px; background: #3b3c36; border-radius: 0px; margin-top:1px;" id="showbtn"><i class="fa fa-eye-slash" aria-hidden="true" id="pwdicon"></i></a>
+      </div>
+    </div>
+    
   </div>
+
+
+
 
 
    <button type="submit" class="btn btn-outline-warning mr-2" id="signinbtn" >Submit</button>
@@ -127,7 +136,18 @@
   </div>
   <div class="form-group">
     <label for="signuppwd">Enter a Password</label>
-    <input type="password" class="form-control" id="signuppwd" style="background: #F3E5AB; color: #8b6508; border-color: #222222;">
+
+   <div class="input-group" id="show_hide_password1">
+      <input type="password" class="form-control" id="signuppwd" style="background: #F3E5AB; color: #8b6508; border-color: #222222;">
+      <div class="input-group-addon">
+        <a class="btn btn-outline-warning" style="border:0px; background: #3b3c36; border-radius: 0px; margin-top:1px;" ><i class="fa fa-eye-slash" aria-hidden="true" ></i></a>
+      </div>
+    </div>
+    
+
+
+
+   
   </div>
 
 
@@ -163,7 +183,7 @@
               <h7 class="mr-auto">You can also continue using Google !</h7>
  
   
-                    <div id="firebaseui-auth-container" style="margin-right: 25%"></div> 
+                    <div id="firebaseui-auth-container" style="margin-right: 25%;"></div> 
 
       </div>
     </div>
