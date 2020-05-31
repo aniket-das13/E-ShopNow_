@@ -64,9 +64,13 @@ var db=firebase.firestore();
 var order_id=null;
 
 db.collection("temp").doc("1").get().then(function(doc){
-order_id=doc.data().oid;
 
+if(doc.exists){
+    order_id=doc.data().oid;
 db.collection("orderplaced").doc(order_id).get().then(function(doc){
+
+
+
 var items=doc.data().items;
 
 console.log(items);
@@ -114,6 +118,7 @@ emailjs.send(service_id, template_id, template_params).then(function() {
 
 
 
+
 });
 
 var ty=document.getElementById("thankyou");
@@ -124,6 +129,8 @@ var od=document.getElementById("orderd");
 od.textContent="Please check your email address ("+em+") for more details.";
 
 
+
+}
 
 });
 
@@ -139,6 +146,11 @@ firebase.firestore().collection("temp").doc("1").delete().then(function() {
 },1500);
 
 
+setTimeout(function(){
+
+ window.location.href="signedin.html";
+
+},5000);
 
 
 
